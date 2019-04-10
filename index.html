@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Timer</title>
+        <script type="text/javascript">
+           var ID =0;
+           var seconds=0;
+
+           function msg(){
+               document.getElementById("msg").innerHTML=seconds+ "seconds";
+               seconds++;
+           }
+
+          function start(){
+              ID = window.setInterval(msg,1000);
+          }
+          function stop(){
+              window.clearInterval(ID);
+          }
+        </script>
+    </head>
+    <body style="background-color: black">
+      
+        <div style="text-align: center; padding-top: 100px; ">
+            <button style="padding: 5%; background-color:darkgray" id ="b1" onclick="start()">Start</button>
+    </br></br>
+    <h1 style="color: white" id ="msg">Click Start</h1>
+    </br></br>
+        <button style="padding: 5%; background-color:darkgray" id ="b2" onclick="stop()">Stop</button>
+      </div>  
+      
+      
+    </body>
+</html>
